@@ -1,0 +1,12 @@
+// Blueprint for what a project.json file would look like.
+{
+  "name": "pipnpm",
+  "description": "",
+  "scripts": {
+    "test": "echo Hello World"
+  },
+  "requirements": {
+    "flask": "2.0.2"
+  },
+  "author": "Aidan Tomcy"
+}
