@@ -3,7 +3,7 @@
 PipNPM adds functionality to create a package.json like file to add scripts
 and install dependencies for Python.
 
-Here's what a project.json file should look like:
+Here's what a pyproject.json file should look like:
 
 ```json
 {

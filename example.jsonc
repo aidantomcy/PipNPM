@@ -1,4 +1,4 @@
-// Blueprint for what a project.json file would look like.
+// Blueprint for what a pyproject.json file would look like.
 {
   "name": "pipnpm",
   "description": "",
