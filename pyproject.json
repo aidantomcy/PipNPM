@@ -1,0 +1,11 @@
+{
+  "name": "pipnpm",
+  "description": "",
+  "scripts": {
+    "testScript": "echo Hello World"
+  },
+  "requirements": {
+    "flask": "2.0.2"
+  },
+  "author": ""
+}
