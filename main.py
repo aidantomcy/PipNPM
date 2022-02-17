@@ -30,7 +30,18 @@ def init():
 
 
 def install():
-    pass
+    if not os.path.exists("pyproject.json"):
+        print("No pyproject.json found")
+        print("Run 'pipnpm init' to create one.")
+    else:
+        with open("pyproject.json", "r") as file:
+            data = json.load(file)
+            for key, value in data["requirements"].items():
+                if not bool(data["requirements"]):
+                    print("No requirements")
+                    break
+                print("Installing packages...")
+                os.system(f"pip install {key}=={value}")
 
 
 def list_packages():
