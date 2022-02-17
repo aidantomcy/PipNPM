@@ -1,6 +1,6 @@
+import json
 import os
 import sys
-import json
 
 
 def init():
@@ -38,14 +38,20 @@ def install():
             data = json.load(file)
             for key, value in data["requirements"].items():
                 if not bool(data["requirements"]):
-                    print("No requirements")
+                    print("No requirements found")
                     break
                 print("Installing packages...")
                 os.system(f"pip install {key}=={value}")
 
 
 def list_packages():
-    pass
+    with open("pyproject.json", "r") as file:
+        data = json.load(file)
+        for key, value in data["requirements"].items():
+            if not bool(data["requirements"]):
+                print("No requirements")
+                break
+            print(f"{key} v{value}")
 
 
 def main():
