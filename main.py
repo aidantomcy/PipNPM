@@ -41,7 +41,12 @@ def install():
                     print("No requirements found")
                     break
                 print("Installing packages...")
-                os.system(f"pip install {key}=={value}")
+                if value == "":
+                    os.system(f"pip install {key}")
+                elif not value.isdecimal():
+                    print("Invalid version")
+                else:
+                    os.system(f"pip install {key}=={value}")
 
 
 def list_packages():
