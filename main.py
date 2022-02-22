@@ -5,15 +5,15 @@ import sys
 
 def init():
     json_data = """{
-  "name": "pipnpm",
+  "name": "%s",
   "description": "",
   "scripts": {
-    "testScript": "echo Hello World"
+    "testScript": "echo \\\"Hello World\\\""
   },
   "requirements": {},
   "author": ""
 }
-"""
+""" % os.getcwd().split("\\")[-1] if sys.platform == "win32" else os.getcwd().split("/")[-1]
 
     if not os.path.exists("pyproject.json"):
         with open("pyproject.json", "w") as file:
